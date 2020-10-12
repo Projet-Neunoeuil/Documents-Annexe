@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/Neunoeil/css/master.css">
+    <link rel="stylesheet" href="/Neunoeil/css/tableau.css">
+    <title>Comparaison</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/Neunoeil/">Retour</a></li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="center">
+      <h1>Tableau comparatif</h1>
+      <aside class="centerShow">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Arduino</th>
+              <th>Raspberry Pi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Explications</th>
+              <td>Nous avons retenu deux modèles d'arduino : UNO et YUN. L'Arduino UNO est la plus répendue des cartes arduino, elle a retenue notre attention car elle dispose du nécessaire à la domotique, sans en avoir trop. Elle a des sorties analogiques et numériques, en nombre certes restreint, mais suffisant pour ce projet. Cependant, elle n'intègre pas nativement de connexion à distance, et c'est la raison pour laquelle la YUN à aussi retenue notre intention, ces deux cartes seront donc comparées à la raspberry, mais aussi entres elles</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Ports :</th>
+              <td>
+                <p class="title">Uno (domotique)</p>
+                <p>6 analogiques</p>
+                <p>14 numériques</p>
+                <p>USB</p>
+                <p>Ethernet suivant modèle</p>
+                <p>Jack</p>
+
+                <p class="title">YUN</p>
+                <p>12 analogiques</p>
+                <p>20 numériques</p>
+                <p>WiFi</p>
+                <p>Ethernet</p>
+                <p>microSD</p>
+                <p>USB</p>
+                <p>MicroUSB</p>
+              </td>
+              <td>
+                <p class="title">Raspberry Pi 2 - B</p>
+                <p>Audio</p>
+                <p>HDMI</p>
+                <p>Souris</p>
+                <p>Clavier</p>
+                <p>WiFi</p>
+                <p>USB</p>
+                <p>MicroUSB (alimentation carte)</p>
+                <p>microSD</p>
+                <p>40 broches GPIO</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Connexion aux composants externes (LED, ...)</th>
+              <td>
+                <p>Direct</p>
+                <p>A installer : <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a></p>
+              </td>
+              <td>
+                <p>Non direct</p>
+                <div class="warning"></div><p>Courrant passable faible, non compatible avec des composants au-delà de ces limites sinon possible de détruire la carte :</p>
+                <ul class="tiret">
+                  <li>- max 16mA</li>
+                  <li>- 3,3V</li>
+                </ul>
+                <p>Des choses à installer ??</p>
+                <a href="https://www.raspberrypi.org/downloads/">Installables</a>
+                <ul class="tiret">
+                  <li>- Raspberry Pi Imager</li>
+                  <li>- Raspberry Pi OS</li>
+                  <li>- Raspberry Pi Desktop (for PC and Mac)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Système d'exploitation</th>
+              <td>
+                <p class="title">UNO :</p>
+                <p>Non</p>
+                <p class="title">YUN :</p>
+                <p>Linux</p>
+              </td>
+              <td>Linux</td>
+            </tr>
+            <tr>
+              <th>Dimensions</th>
+              <td>68.6mm x 53.3mm</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Langages de programation</th>
+              <td>C++, Arduino (C derivative), C, Assembleur, C#, Python, Java</td>
+              <td>Python, C, C++, PHP, Java, Javascript, Ruby</td>
+            </tr>
+            <tr>
+              <th>Puissance délivrée</th>
+              <td>40mA par sorties</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Fréquence :</th>
+              <td>
+                <p class="title">UNO :</p>
+                <p>16MHz</p>
+                <p class="title">YUN :</p>
+                <p>16MHz sur la carte + 400 MHz Linux</p>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Consomation</th>
+              <td>
+                <p class = "title">UNO</p>
+                <p>Alimentation : 5V</p>
+                <p>Consommation : 50mA</p>
+                <p>Puissance : 250mW</p>
+                <p class = "title">YUN</p>
+                <p>Alimentation : 5V</p>
+                <p>Consommation : 300mA max</p>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>RAM</th>
+              <td>
+                <p class = "title">UNO</p>
+                <p>2Ko</p>
+                <p class = "title">YUN</p>
+                <p>2.5Ko sur le microprocesseur + 64Mo sur Linux</p>
+              </td>
+              <td>1Go</td>
+            </tr>
+            <tr>
+              <th>CPU</th>
+              <td>8bit</td>
+              <td>64bit</td>
+            </tr>
+            <tr>
+              <th>Audio et Interface graphique</th>
+              <td>Non supporté</td>
+              <td>Supporté</td>
+            </tr>
+            <tr>
+              <th>Utilité originelle (créé pour :)</th>
+              <td>Controler des machines et effectuer des tâches répétitives</td>
+              <td>Traiter des données et communiquer avec d'autres systèmes</td>
+            </tr>
+            <tr>
+              <th>Modèles</th>
+              <td>
+                <p class = "title">UNO</p>
+                <ul class="tiret">
+                  <li>- Processeur ATmega328P 20MHz</li>
+                  <li>- 32ko mémoire Flash + 1ko EEPROM</li>
+                </ul>
+
+                <p class = "title">YUN</p>
+                <ul class="tiret">
+                  <li>- Processeur ATmega32U4 16MHz et Atheros AR9331 400MHz</li>
+                  <li>- 32ko mémoire Flash + 1ko EEPROM + 16Mo Flash</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Prix</th>
+              <td>
+                <p>UNO : 24,30€</p>
+                <p>YUN : 58,80€</p>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Prix additionnels commun</th>
+              <td colspan="2">
+                <p>PHMètre : 29,99€</p>
+                <p>LED RGB : 27,99€</p>
+                <p>Capteur de température : 7,99€</p>
+                <p>La/les resistances : ???</p>
+                <p>Le/Les cables pour connecter : ???</p>
+                <p>Un équipement d'allimentation automatique</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Prix additionnels spécifiques</th>
+              <td>Boitier de protèction Arduino - ???</td>
+              <td>Boitier de protection RaspberryPi - ???</td>
+            </tr>
+            <tr>
+              <th>Site et délais de livraison</th>
+              <td>
+                <p class="title">UNO :</p>
+                <p><a href="https://boutique.semageek.com/fr/2-arduino-uno-dip-rev3-8058333490090.html">Semageek</a> (3 à 4 jours ouvrés le 11/10/2020)</p>
+                <p class = "title">YUN :</p>
+                <p><a href="https://www.amazon.fr/Arduino-Y%C3%BAn-rev2-USB-Microcontroller/dp/B07FRZ9QDB/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3QYEGFMNPU65R&dchild=1&keywords=arduino+yun&qid=1602420857&sprefix=arduino+yun%2Cgarden%2C322&sr=8-1">Amazon</a> (~5 jours ouvrés le 11/10/2020)</p>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Configurations :</th>
+              <td></td>
+              <td>
+                <ul class="tiret">
+                  <li>- Un clavier et une souris USB</li>
+                  <li>- Un moniteur et un téléviseur avec une entrée HDMI ou un cable HDMI</li>
+                  <li>- Une alimentation 5V microUSB délivrant au moins 1 ampère</li>
+                  <li>- Un câble ethernet pour le raccordement à votre routeur ou une clé wifi USB</li>
+                  <li>- Une carte microSD (4Go suffisants mais de préférence 8Go surtout de classe 10 pour des performances accrues)</li>
+                  <li>- Un second ordinateur doté d'un adaptateur de carte microSD pour configurer la carte mémoire (sinon vous pouvez acheter une carte microSD avec un adaptateur NOOBS - New Out Of the Box Software - préinstallé)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Images</th>
+              <td>
+                <img src="/NeuNoeil/img/arduino_uno.png" alt="Arduino UNO">
+                <img src="/NeuNoeil/img/arduino_yun.png" alt="Arduino YUN">
+              </td>
+              <td>
+                <img src="/NeuNoeil/img/raspy.png" alt="RaspBerry PI" class="raspy">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </aside>
+  </body>
+</html>

@@ -29,7 +29,7 @@
             <tr>
               <th>Explications</th>
               <td>Nous avons retenu deux modèles d'arduino : UNO et YUN. L'Arduino UNO est la plus répendue des cartes arduino, elle a retenue notre attention car elle dispose du nécessaire à la domotique, sans en avoir trop. Elle a des sorties analogiques et numériques, en nombre certes restreint, mais suffisant pour ce projet. Cependant, elle n'intègre pas nativement de connexion à distance, et c'est la raison pour laquelle la YUN à aussi retenue notre intention, ces deux cartes seront donc comparées à la raspberry, mais aussi entres elles</td>
-              <td></td>
+              <td>Nous avons retenu deux modèle de raspberry : Pi 3 Model A+ et Pi 4 Model B. Les deux peuvent répondre le besoin de client. Elles ont retunue notre attention car elles disposent du nécessaire à la domotique, sans en avoir trop.</td>
             </tr>
             <tr>
               <th>Ports :</th>
@@ -51,14 +51,29 @@
                 <p>MicroUSB</p>
               </td>
               <td>
-                <p class="title">Raspberry Pi 2 - B</p>
+                <p class="title">Raspberry Pi 4 - B 2GB</p>
+                <p>Micro</p>
+                <p>Caméra</p>
                 <p>Audio</p>
-                <p>HDMI</p>
                 <p>Souris</p>
                 <p>Clavier</p>
+                <p>Ecran</p>
+                <p>Ethernet</p>
                 <p>WiFi</p>
-                <p>USB</p>
-                <p>MicroUSB (alimentation carte)</p>
+                <p>4 * USB</p>
+                <p>MicroUSB</p>
+                <p>microSD</p>
+                <p>40 broches GPIO</p>
+                <p class="title">Raspberry Pi 3 - A+</p>
+                <p>Micro</p>
+                <p>Caméra</p>
+                <p>Audio</p>
+                <p>Souris</p>
+                <p>Clavier</p>
+                <p>Ecran</p>
+                <p>WiFi</p>
+                <p>1 * USB</p>
+                <p>MicroUSB</p>
                 <p>microSD</p>
                 <p>40 broches GPIO</p>
               </td>
@@ -98,7 +113,12 @@
             <tr>
               <th>Dimensions</th>
               <td>68.6mm x 53.3mm</td>
-              <td></td>
+              <td>
+                <p class="title">Raspberry Pi 4 - B 2 GB</p>
+                <p>85mm x 56mm</p>
+                <p class="title">Raspberry Pi 3 - A+</p>
+                <p>65mm x 56mm</p>
+              </td>
             </tr>
             <tr>
               <th>Langages de programation</th>
@@ -108,7 +128,7 @@
             <tr>
               <th>Puissance délivrée</th>
               <td>40mA par sorties</td>
-              <td></td>
+              <td>16mA par sorties</td>
             </tr>
             <tr>
               <th>Fréquence :</th>
@@ -118,7 +138,12 @@
                 <p class="title">YUN :</p>
                 <p>16MHz sur la carte + 400 MHz Linux</p>
               </td>
-              <td></td>
+              <td>
+                <p class="title">Raspberry Pi 4 - B 2 GB</p>
+                <p>1.5GHz</p>
+                <p class="title">Raspberry Pi 3 - A+</p>
+                <p>1.4GHz</p>
+              </td>
             </tr>
             <tr>
               <th>Consomation</th>
@@ -131,7 +156,10 @@
                 <p>Alimentation : 5V</p>
                 <p>Consommation : 300mA max</p>
               </td>
-              <td></td>
+              <td>
+                <p>302.5mA de moyenne</p>
+                <p>5V</p>
+              </td>
             </tr>
             <tr>
               <th>RAM</th>
@@ -173,7 +201,18 @@
                   <li>- 32ko mémoire Flash + 1ko EEPROM + 16Mo Flash</li>
                 </ul>
               </td>
-              <td></td>
+              <td>
+                <p class="title">Raspberry Pi 4 - B 2 GB</p>
+                <ul class="tiret">
+                  <li>- Broadcom BCM2711 64-bit quad core Cortex-A72(1.5GHz)</li>
+                  <li>- 2 GB LPDDR4 (4GB + 8GB supplémentaires)</li>
+                </ul>
+                <p class="title">Raspberry Pi 3 - A+</p>
+                <ul class="tiret">
+                  <li>- Broadcom BCM2837B0 Cortex-A53 64-bit(1.4GHz)</li>
+                  <li>- 512 MB LPDDR2 SDRAM</li>
+                </ul>
+              </td>
             </tr>
             <tr>
               <th>Prix</th>
@@ -181,46 +220,49 @@
                 <p>UNO : 24,30€</p>
                 <p>YUN : 58,80€</p>
               </td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Prix additionnels commun</th>
-              <td colspan="2">
-                <p>PHMètre : 29,99€</p>
-                <p>LED RGB : 27,99€</p>
-                <p>Capteur de température : 7,99€</p>
-                <p>La/les resistances : ???</p>
-                <p>Le/Les cables pour connecter : ???</p>
-                <p>Un équipement d'allimentation automatique</p>
+              <td>
+                <p>Raspberry Pi 4 - B 2 GB : 42.80€</p>
+                <p>Raspberry Pi 3 - A+ : 31.75€</p>
+                <p>1.4GHz</p>
               </td>
             </tr>
             <tr>
-              <th>Prix additionnels spécifiques</th>
-              <td>Boitier de protèction Arduino - ???</td>
-              <td>Boitier de protection RaspberryPi - ???</td>
+              <th>Additions communes</th>
+              <td colspan="2">
+                <p>PHMètre (29,99€)</p>
+                <p>LED RGB (27,99€)</p>
+                <p>Capteur de température (7,99€)</p>
+                <p>La/les resistances</p>
+                <p>Un équipement de distribution automatique de nourriture</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Additions spécifiques</th>
+              <td>Boitier de protèction Arduino (7.90€)</td>
+              <td>Boitier de protection RaspberryPi - (13.54€ 4B - 19.82€ 3 A+)</td>
+            </tr>
+            <tr>
+              <th>Prix total (carte + équipement)</th>
+              <td>
+                <p>UNO : 98.88€ (frais de port 5.50€ inclus)</p>
+                <p>YUN : 112.48€ en Promo (au 15/10/2020), 119.98€ Hors promo. (5.50€ de frais de port inclus)</p>               
+              </td>
+              <td>
+                <p>4B : 121.82€</p>
+                <p>3A+ : 117.05€</p>
+              </td>
             </tr>
             <tr>
               <th>Site et délais de livraison</th>
               <td>
                 <p class="title">UNO :</p>
-                <p><a href="https://boutique.semageek.com/fr/2-arduino-uno-dip-rev3-8058333490090.html">Semageek</a> (3 à 4 jours ouvrés le 11/10/2020)</p>
+                <p><a href="https://store.arduino.cc/arduino-uno-rev3">Arduino Store</a> (1 à 5 jours ouvrés)</p>
                 <p class = "title">YUN :</p>
-                <p><a href="https://www.amazon.fr/Arduino-Y%C3%BAn-rev2-USB-Microcontroller/dp/B07FRZ9QDB/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3QYEGFMNPU65R&dchild=1&keywords=arduino+yun&qid=1602420857&sprefix=arduino+yun%2Cgarden%2C322&sr=8-1">Amazon</a> (~5 jours ouvrés le 11/10/2020)</p>
+                <p><a href="https://store.arduino.cc/arduino-yun-rev-2">Arduino Store</a> 1 à 5 jours ouvrés)</p>
               </td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Configurations :</th>
-              <td></td>
               <td>
-                <ul class="tiret">
-                  <li>- Un clavier et une souris USB</li>
-                  <li>- Un moniteur et un téléviseur avec une entrée HDMI ou un cable HDMI</li>
-                  <li>- Une alimentation 5V microUSB délivrant au moins 1 ampère</li>
-                  <li>- Un câble ethernet pour le raccordement à votre routeur ou une clé wifi USB</li>
-                  <li>- Une carte microSD (4Go suffisants mais de préférence 8Go surtout de classe 10 pour des performances accrues)</li>
-                  <li>- Un second ordinateur doté d'un adaptateur de carte microSD pour configurer la carte mémoire (sinon vous pouvez acheter une carte microSD avec un adaptateur NOOBS - New Out Of the Box Software - préinstallé)</li>
-                </ul>
+                <p>4B : <a href = "https://www.elektor.fr/raspberry-pi-4-b-2-gb-ram?src=raspberrypi">Elektorstore</a>(4 jours)</p>
+                <p>3A+ : <a href="https://www.reichelt.com/fr/fr/raspberry-pi-3-a-4x-1-4-ghz-512-mo-ram-wifi-bt-raspberry-pi-3a--p243791.html?src=raspberrypi">Reichelt</a>(3-6 jours)</p>
               </td>
             </tr>
             <tr>

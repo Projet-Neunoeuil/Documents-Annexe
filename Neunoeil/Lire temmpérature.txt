@@ -1,0 +1,59 @@
+La première étape consiste à importer les modules Python dont nous avons besoin. Le module os nous permet d'accéder aux pilotes du protocole 1-Wire et de s'interfacer avec le capteur. 
+Le module Time permet la gestion du temps et de définir des intervalles de temps dans notre code.
+
+ Sélectionnez
+import os
+import time
+Nous chargeons ensuite les pilotes :
+
+ Sélectionnez
+os.system('modprobe w1-gpio')
+os.system('modprobe w1-therm')
+L'étape suivante consiste à définir le fichier de sortie du capteur (le fichier w1_slave) comme nous l'avons vu précédemment. 
+Souvenez-vous de bien utiliser le numéro de série de votre propre capteur !
+
+Sélectionnez
+temp_sensor = '/sys/bus/w1/devices/28-000005e2fdc3/w1_slave'
+Nous avons maintenant besoin d'une variable pour enregistrer les données brutes de température, 
+c'est-à-dire les deux lignes de texte renvoyées par le capteur et que nous avons affichées précédemment en ligne de commande, 
+grâce à la fonction temp_raw. Nous pourrions afficher dès maintenant ces données brutes, mais nous allons plutôt les traiter pour les rendre plus exploitables. 
+Pour cela, nous ouvrons le fichier, récupérons les lignes et clôturons le fichier du capteur. 
+La fonction retourne alors les lignes de données brutes afin de les exploiter plus tard dans le code.
+
+ Sélectionnez
+def temp_raw():
+    f = open(temp_sensor, 'r')
+    lines = f.readlines()
+    f.close()
+    return lines
+Premièrement, nous allons vérifier que la variable récupérée grâce à la fonction temp_raw précédente est exempte d'erreurs. 
+Si vous étudiez la sortie du fichier de sortie original, comme nous l'avons vu dans l'exemple en ligne de commande, vous voyez deux lignes. 
+La première ligne contient la chaîne de caractères « 72 01 4b 46 7f ff 0e 10 57 : crc=57 YES ». 
+Nous découpons cette chaîne en ne conservant que les trois derniers caractères et nous vérifions que son contenu est « YES », 
+ce qui indique que l'acquisition de température par le capteur s'est déroulée correctement. En Python, la non-égalité est définie grâce à l'opérateur !=. 
+Donc, tant que la sous-chaîne extraite est différente de « YES », nous demandons au programme de temporiser 0,2 s avant de recommencer une nouvelle lecture.
+
+ Sélectionnez
+def read_temp():
+    lines = temp_raw()
+    while lines[0].strip()[-3: ] != 'YES':
+        time.sleep(0.2)
+        lines = temp_raw()
+Une fois la sous-chaîne « YES » détectée, nous pouvons nous occuper de la deuxième ligne de sortie.
+Dans notre exemple, la chaîne obtenue est « 72 01 4b 46 7f ff 0e 10 57 t=23125 ». 
+On cherche la position de la sous-chaîne « t= », et si elle est trouvée, la valeur de la température qui suit « t= » est extraite. 
+Il ne reste qu'à faire deux calculs simples pour convertir la température en degrés Celsius et en degrés Fahrenheit.
+
+ Sélectionnez
+temp_output = lines[1].find('t=' )
+if temp_output != -1:
+    temp_string = lines[1].strip()[temp_output+2: ]
+    temp_c = float(temp_string) / 1000.0
+    temp_f = temp_c * 9.0 / 5.0 + 32.0
+    return temp_c, temp_f
+Finalement, le programme va boucler pour afficher la température toutes les secondes.
+
+ Sélectionnez
+while True:
+    print(read_temp())
+    time.sleep(1)

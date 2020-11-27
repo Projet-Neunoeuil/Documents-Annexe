@@ -1,0 +1,43 @@
+body {
+  color: white;
+  background-image: url("../img/infinite.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+a {
+  padding: 15px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50px;
+  text-decoration: none;
+  color: orange;
+}
+
+a:hover {
+  background-color: rgba(155,155,155,0.5);
+  color: orange;
+}
+
+a:visited {
+  background-color: rgba(255,255,255,0.5);
+  color: rgb(0,255,0);
+}
+
+header {
+  font-size: 25px;
+  text-align: center;
+  border-bottom: solid 2px green;
+}
+.Episode {
+  text-align: center;
+  margin: 5%;
+  height: 40%;
+  padding: 25px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 15px;
+}
+
+iframe {
+  width: 700px;
+  height: 393px;
+}
